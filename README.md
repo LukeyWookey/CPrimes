@@ -2,7 +2,7 @@
 Simple (and probably very unoptimized) program to calculate the first x prime numbers :D
 
 Made in C++ :3
-## Installation
+## Installation/Building from Source
 Install [Visual Studio](https://visualstudio.microsoft.com/),
 
 Clone the repository (with `git clone https://github.com/LukeyWookey/CPrimes/` or directly within Visual Studio),
