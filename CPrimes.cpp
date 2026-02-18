@@ -1,23 +1,30 @@
 #include <stdio.h>
 #include <time.h>
 
+int isPrime(int argc) {
+	if (argc <= 1) {
+		return 0;
+	};
+
+	int i;
+	for (i = 2; i < argc; i++) {
+		if (argc % i == 0) {
+			return 0;
+		};
+	};
+
+	return 1;
+}
+
 int primes(int argc) {
 	int primeAmount = 0;
-	int count = 0;
 	int number = 1;
-	int i;
 	while (primeAmount < argc) {
-		for (i = 1; i <= number; i++) {
-			if (number % i == 0) {
-				count += 1;;
-			};
-		};
-		if (count <= 2 && number != 0 && number != 1 && number != 2) {
+		if (isPrime(number)) {
 			printf("Prime Number: %d\n", number);
 			primeAmount += 1;
 		};
 		number += 1;
-		count = 0;
 	};
 	return 0;
 }
